@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParseData.h"
 
 @interface ViewController : UIViewController
+@property(nonatomic,strong) NSMutableArray *marvelEntityArray;
+@property(nonatomic,strong) NSMutableArray *filteredMarvelEntityArray;
+@property (weak, nonatomic) IBOutlet UITableView *marvelTableView;
+@property (weak, nonatomic) IBOutlet UIView *searchBarView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet ParseData *detailMarvelData;
 
+- (IBAction)searchButtonAction:(id)sender;
+- (IBAction)cancelButtonAction:(id)sender;
 
 @end
 
